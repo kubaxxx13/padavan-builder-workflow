@@ -34,12 +34,16 @@ jobs:
           echo "$v=${!v}" >> $GITHUB_ENV
         done
 
-    - name: Download sources and toolchain
+    - name: Download sources
       run: |
         git config --global --add safe.directory '*'
         git clone -b "$PADAVAN_BRANCH" "$PADAVAN_REPO"
         git -C padavan-ng checkout "$PADAVAN_COMMIT"
-        wget -qO- "$PADAVAN_TOOLCHAIN_URL" | tar -C padavan-ng --zstd -xf -
+
+    - name: Build toolchain
+      run: |
+        cd padavan-ng/toolchain-mipsel
+        ./build_toolchain
 
     - name: Install themes
       run: |
