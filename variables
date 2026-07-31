@@ -1,5 +1,5 @@
 PADAVAN_REPO="https://github.com/nilabsent/padavan-ng.git"
-PADAVAN_BRANCH="main"
+PADAVAN_BRANCH="master"
 PADAVAN_COMMIT="HEAD"
 
 PADAVAN_THEMES_REPO="https://gitlab.com/hadzhioglu/padavan-themes.git"
