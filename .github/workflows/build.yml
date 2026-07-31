@@ -42,8 +42,8 @@ jobs:
 
     - name: Build toolchain
       run: |
-        cd padavan-ng/toolchain-mipsel
-        ./build_toolchain
+        cd padavan-ng/toolchain
+        ./build_toolchain.sh
 
     - name: Install themes
       run: |
